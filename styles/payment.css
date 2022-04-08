@@ -1,0 +1,110 @@
+:root {
+    --button-submit-color: #2BCA00;
+    --button-submit-color-hover: #007E13;
+    --button-cancel-color: #FF0049;
+    --button-cancel-color-hover: #AF0031;
+    --padding-button: 0.8em;
+    --payment-input-width: 70%;
+}
+
+#payment-container {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.payment-form {
+    background-color: whitesmoke;
+    width: 25em;
+    height: 25em;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.payment-title {
+    font-size: 2em;
+}
+
+.payment-control {
+    text-align: center;
+    padding: 5px;
+    width: var(--payment-input-width);
+    font-size: 0.9em;
+}
+
+.payment-cart-info {
+    width: var(--payment-input-width);
+    display: flex;
+    justify-content: space-around;
+}
+
+.payment-cart-info input {
+    width: calc(var(--payment-input-width) / 2);
+    font-size: 0.85em;
+}
+
+.payment-cart-info input[value="CVV"] {
+    text-align: center;
+}
+
+.payment-form input[value="País de la tarjeta"] {
+    width: calc(var(--payment-input-width) - 20%);
+}
+
+.payment-buttons input[type="submit"] {
+    cursor: pointer;
+    background-color: var(--button-submit-color);
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 0.8em;
+    padding: var(--padding-button);
+    transition: background-color ease 300ms;
+}
+
+.payment-buttons {
+    width: var(--payment-input-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1em;
+}
+
+.payment-buttons input[type="submit"]:hover {
+    background-color: var(--button-submit-color-hover);
+}
+
+.payment-buttons input[type="button"] {
+    cursor: pointer;
+    background-color: var(--button-cancel-color);
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 0.8em;
+    padding: var(--padding-button);
+    transition: background-color ease 300ms;
+}
+
+.payment-buttons input[type="button"]:hover {
+    background-color: var(--button-cancel-color-hover);
+}
+
+@media (max-width: 550px) {
+    .payment-form {
+        width: 90%;
+    }
+    .payment-title {
+        font-size: 1.6em;
+    }
+}
